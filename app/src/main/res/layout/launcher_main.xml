@@ -23,11 +23,128 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="125dp"
         android:layout_marginTop="70dp"
-        android:text="@string/bankName"
         android:fontFamily="@font/helvetica_light"
-        android:textSize="30sp"
-        android:textColor="#9B59B6" />
+        android:text="@string/bankName"
+        android:textColor="#9B59B6"
+        android:textSize="30sp" />
+
+    <GridLayout
+        android:id="@+id/launcherMainContentBox_1"
+        android:layout_width="380dp"
+        android:layout_height="110dp"
+        android:layout_below="@+id/launcherMainTitleIcon"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/content_box_style">
+
+        <ImageView
+            android:id="@+id/launcherMainContentBox_1_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left|center"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/launcher_main_content_box_1_icon" />
+
+        <TextView
+            android:id="@+id/launcherMainContentBox_1_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/sf_pro_text_semibold"
+            android:text="@string/launcherMainContentBox_1_text"
+            android:textColor="#000000"
+            android:textSize="17sp" />
 
 
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/launcherMainContentBox_2"
+        android:layout_width="380dp"
+        android:layout_height="110dp"
+        android:layout_below="@+id/launcherMainContentBox_1"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/content_box_style"
+        android:columnCount="4"
+        android:rowCount="2">
+
+        <ImageView
+            android:id="@+id/launcherMainContentBox_2_icon"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/launcher_main_content_box_2_icon" />
+
+        <TextView
+            android:id="@+id/launcherMainContentBox_2_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21.5dp"
+            android:layout_marginTop="9dp"
+            android:fontFamily="@font/sf_pro_text_semibold"
+            android:text="@string/launcherMainContentBox_2_text"
+            android:textColor="#000"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/launcherMainContentBox_2_currentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/sf_pro_text_semibold"
+            android:text="@string/simple_date"
+            android:textColor="#988F8F"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/launcherMainContentBox_2_USD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="41.5dp"
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/sf_pro_text_semibold"
+            android:text="@string/usd"
+            android:textColor="#000"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/launcherMainContentBox_2_USDCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/sf_pro_text_semibold"
+            android:text="@string/simple_course"
+            android:textColor="#988F8F"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/launcherMainContentBox_2_EUR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="51.5dp"
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/sf_pro_text_semibold"
+            android:text="@string/eur"
+            android:textColor="#000"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/launcherMainContentBox_2_EURCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/sf_pro_text_semibold"
+            android:text="@string/simple_course"
+            android:textColor="#988F8F"
+            android:textSize="12sp" />
+
+    </GridLayout>
 
 </RelativeLayout>

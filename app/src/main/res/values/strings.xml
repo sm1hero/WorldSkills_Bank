@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">WorldSkills_Bank</string>
     <string name="bankName">WorldSkills Bank</string>
+    <string name="launcherMainContentBox_1_text">Отделения и банкоматы</string>
+    <string name="launcherMainContentBox_2_text">Курсы валют</string>
+    <string name="simple_date">NN.NN.NNNN</string>
+    <string name="usd">USD</string>
+    <string name="simple_course">NN</string>
+    <string name="eur">EUR</string>
 </resources>
