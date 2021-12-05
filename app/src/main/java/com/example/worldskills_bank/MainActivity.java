@@ -2,22 +2,28 @@ package com.example.worldskills_bank;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import java.net.MalformedURLException;
+import java.io.IOException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import static com.example.worldskills_bank.NetworkUtils.generateURL;
+import static com.example.worldskills_bank.NetworkUtils.getResponseFromURL;
 
 public class MainActivity extends AppCompatActivity {
+
+    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.launcher_main);
+
+        textView = findViewById(R.id.launcherMainContentBox_2_text);
 
         valuesSetUp();
     }
@@ -41,14 +47,31 @@ public class MainActivity extends AppCompatActivity {
 
         URL generatedURL = null;
 
-        try {
-            generatedURL = generateURL(currentDate);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-
+        generatedURL = generateURL(currentDate);
         new CpQueryTask().execute(generatedURL);
 
-        String response = null;
+    }
+
+
+    public class CpQueryTask extends AsyncTask<URL, Void, String> {
+
+        @Override
+        protected String doInBackground(URL... urls) {
+
+            String response = null;
+
+            try {
+                response = getResponseFromURL(urls[0]);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            return response;
+        }
+
+        @Override
+        protected void onPostExecute(String response) {
+            textView.setText(response);
+        }
     }
 }

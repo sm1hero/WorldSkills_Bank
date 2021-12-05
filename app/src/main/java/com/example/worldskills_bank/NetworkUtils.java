@@ -11,15 +11,22 @@ import java.util.Scanner;
 
 public class NetworkUtils {
     private static final String CP_API_BASE_URL   = "https://www.cbr.ru/";
-    private static final String CP_DAILY_GET      = "scripts/XML_daily.asp";
+    private static final String CP_DAILY_GET      = "/scripts/XML_daily.asp";
     private static final String CP_PARAM_DATE_REQ = "date_req";
 
-    public static URL generateURL(String date) throws MalformedURLException {
+
+    public static URL generateURL(String date) {
         Uri buildUri = Uri.parse(CP_API_BASE_URL + CP_DAILY_GET).buildUpon()
                 .appendQueryParameter(CP_PARAM_DATE_REQ, date).build();
 
         URL url = null;
-        url = new URL(buildUri.toString());
+
+        try {
+            url = new URL(buildUri.toString());
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+
         return url;
     }
 
