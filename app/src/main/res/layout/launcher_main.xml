@@ -147,4 +147,16 @@
 
     </GridLayout>
 
+    <Button
+        android:id="@+id/launcherMainButtonSingIn"
+        android:layout_width="380dp"
+        android:layout_height="110dp"
+        android:layout_below="@id/launcherMainContentBox_2"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="53dp"
+        android:background="@drawable/button_style_sing_in"
+        android:fontFamily="@font/sf_pro_text_heavy"
+        android:text="@string/sing_in"
+        android:textSize="17sp" />
+
 </RelativeLayout>
