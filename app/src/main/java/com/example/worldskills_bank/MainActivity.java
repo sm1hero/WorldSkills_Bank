@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     public class CpQueryTask extends AsyncTask<URL, Void, String> {
 
         @Override
